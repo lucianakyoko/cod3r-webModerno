@@ -2,15 +2,42 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <title>Especificidade CSS</title>
-    <style>
-        /* https://developer.mozilla.org/pt-BR/docs/Web/CSS/Specificity */
+  <meta charset="UTF-8">
+  <title>Especificidade CSS</title>
+  <style>
+    /* https://developer.mozilla.org/pt-BR/docs/Web/CSS/Specificity */
+
+    /*
+    Em linhas gerais::after
+
+    1. Regra com !important -> seu uso é desencorajado
+    2. Seletores mais específicos
+    3. Última regra processada (em caso de empate) prevalece
+    */
+
+
+    
+    p {
+      background-color: #aaa;
+    }
+
+    .observacao {
+      background-color: #5F5;
+      border: dashed 5px;
+      padding: 20px;
+      font-size: 40px;
+    }
+
+    p.observacao {
+      padding: 5px 60px;
+      background: linear-gradient(to right, red, yellow);
+    }
+
     </style>
 </head>
 
 <body>
-    <p class='observacao'>Olha essa observação!!!!</p>
+  <p class='observacao'>Olha essa observação!!!!</p>
 </body>
 
 </html>
